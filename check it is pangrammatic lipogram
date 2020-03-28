@@ -1,0 +1,37 @@
+//A pangrammatic lipogram is a text that uses every letter of the alphabet except one. 
+//For example, “The quick brown fox jumped over the lazy dog” omits the letter S, which the usual pangram includes by using the word jumps.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100];
+    int i,alpha[26]={0},s=0;
+    scanf("%[^\n]s",a);
+    for(i=0;i<strlen(a);i++)
+    {
+        if(a[i]<='Z' && a[i]>='A')
+            {
+                int index=a[i]-'A';
+                alpha[index]++;
+            }
+        else
+            {
+                int index=a[i]-'a';
+                alpha[index]++;
+            }
+    }
+    for(i=0;i<27;i++)
+    {
+        if(alpha[i]==0)
+        {
+           s++;
+        }
+    }
+    if(s==1)
+        printf("Pangrammatic Lipogram");
+    else if(s==0)
+        printf("Pangram");
+    else
+        printf("not Pangram might be a Lipogram");
+}
