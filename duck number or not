@@ -1,0 +1,15 @@
+//A Duck number is a number which has zeroes present in it, but there should be no zero present in the beginning of the number.
+//For example 3210, 8050896, 70709 are all duck numbers whereas 02364, 03401 are not.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100];
+    int i,j=0;
+    scanf("%s",a);
+    if(a[0]=='0')
+        printf("Not A Duck Number");
+    else
+        printf("Duck Number");
+}
