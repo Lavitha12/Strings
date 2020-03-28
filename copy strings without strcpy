@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    char a[100],b[100],temp[100];
+    int i;
+    scanf("%s",a);
+    scanf("%s",b);
+    printf("a is %s\n",a);
+    printf("b is %s\n",b);
+    for(i=0;a[i]!='\0',b[i]!='\0';i++)
+    {
+        temp[i]=a[i];
+        a[i]=b[i];
+        b[i]=temp[i];
+    }
+    b[i+1]='\0';
+    a[i+1]='\0';
+    printf("a is %s\n",a);
+    printf("b is %s",b);
+}
