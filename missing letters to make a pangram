@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100];
+    int i,alpha[26]={0},s=0;
+    scanf("%[^\n]s",a);
+    for(i=0;i<strlen(a);i++)
+    {
+        if(a[i]<='Z' && a[i]>='A')
+            {
+                int index=a[i]-'A';
+                alpha[index]++;
+            }
+        else
+            {
+                int index=a[i]-'a';
+                alpha[index]++;
+            }
+    }
+    printf("\nadd below letters to make it pangram:\n");
+    for(i=0;i<27;i++)
+    {
+        if(alpha[i]==0)
+        {
+           printf("%c ",(char)i+'a');
+        }
+    }
+}
