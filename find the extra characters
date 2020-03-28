@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char b[100];
+    char a[100];
+    scanf("%s",a);//using a string's length finding other string's extra characters
+    scanf("%s",b);
+    for(int i=strlen(a);i<strlen(b);i++)
+        printf("%c",b[i]);
+}
