@@ -1,0 +1,38 @@
+// A pangram is a sentence containing every letter in the English Alphabet.
+
+// Examples : " The quick brown fox jumps over the lazy dog ” is a Pangram [Contains all the characters from ‘a’ to ‘z’]
+// “The quick brown fox jumps over the dog” is not a Pangram [Doesn’t contains all the characters from ‘a’ to ‘z’, as ‘l’, ‘z’, ‘y’ are missing]
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100];
+    int i,alpha[26]={0},s=0;
+    scanf("%[^\n]s",a);
+    for(i=0;i<strlen(a);i++)
+    {
+        if(a[i]<='Z' && a[i]>='A')
+            {
+                int index=a[i]-'A';
+                alpha[index]++;
+            }
+        else
+            {
+                int index=a[i]-'a';
+                alpha[index]++;
+            }
+    }
+    for(i=0;i<27;i++)
+    {
+        if(alpha[i]==0)
+        {
+            s=1;
+            break;
+        }
+    }
+    if(s==0)
+        printf("yes");
+    else
+        printf("no");
+}
