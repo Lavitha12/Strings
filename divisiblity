@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	char a[100];
+	int odd=0,even=0;
+	scanf("%s",a);
+	int n=strlen(a)-1;
+	printf("\ndivisibility by 11:");
+	for(int i=0;i<=n;i++)
+    {
+        if(i%2 == 0)
+        {
+            even+=(a[i]-'0');
+        }
+        else
+            odd+=(a[i]-'0');
+    }
+    if((odd-even)%11==0)
+        printf("\nyes");
+    else
+        printf("\nno");
+    printf("\ndivisibility by 4:");
+    int last=a[n]-'0';
+    int secoond_last=a[n-1]-'0';
+    if((secoond_last*10+last)%4 == 0)
+        printf("\nyes");
+    else
+        printf("\nno");
+
+}
