@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+	int N;
+	scanf("%d",&N);
+	if (N == 0)
+		printf("0\n");
+	if (N % 9 != 0)
+		printf("%d",N % 9);
+	for (int i = 1; i <= (N / 9); ++i)
+		printf("9");
+  for (int i = 1; i <= N; ++i)
+		printf("0");
+	printf("\n");
+}
