@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int n,k=0;
+    char a[100];
+    scanf("%s",a);
+    scanf("%d",&n);
+    for(int i=0;k<strlen(a);i++)
+    {
+        if(i%2==0)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                    if(k>=strlen(a))
+                        printf("*");
+                    else
+                        printf("%c",a[k]);
+                    k++;
+            }
+        }
+        if(i%2!=0)
+        {
+            for(int j=(k+n)-1;j>=k;j--)
+            {
+                if(j>=strlen(a))
+                    printf("*");                
+                else
+                    printf("%c",a[j]);
+            }
+            k=k+n;
+         }        
+        printf("\n");
+    }
+    }
+
+
